@@ -24,11 +24,6 @@ public class AvailableCarpoolsFragment extends Fragment {
 
     @BindView(R.id.fab_post_ride) FloatingActionButton mPostRide;
 
-    public static AvailableCarpoolsFragment getInstance() {
-        return new AvailableCarpoolsFragment();
-    }
-
-
     public AvailableCarpoolsFragment() {
         // Required empty public constructor
     }

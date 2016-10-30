@@ -14,10 +14,6 @@ import com.ninja.neighbours.R;
  */
 public class MyCarpoolsFragment extends Fragment {
 
-    public static MyCarpoolsFragment getInstance() {
-        return new MyCarpoolsFragment();
-    }
-
     public MyCarpoolsFragment() {
         // Required empty public constructor
     }

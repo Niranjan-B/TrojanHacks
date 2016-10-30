@@ -15,10 +15,6 @@ import com.ninja.neighbours.fragments.CarPoolingFragment;
  */
 public class CarpoolRequestsFragment extends Fragment {
 
-    public static CarpoolRequestsFragment getInstance() {
-        return new CarpoolRequestsFragment();
-    }
-
     public CarpoolRequestsFragment() {
         // Required empty public constructor
     }
