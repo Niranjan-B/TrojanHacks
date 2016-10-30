@@ -1,12 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.ninja.neighbours.fragments.HomeFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.ninja.neighbours.fragments.HomeFragment">
+
+    <ImageView
+        android:id="@+id/image_view_fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Screen Fragment"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view_fragment_home"
+        android:text="Mardi Gras is one of the oldest apartments. 80% of them are Indians :P. Located at 720 W 27th St #2, Los Angeles, CA 90007. All the standard facilities available including bed-bugs :P."
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
-</FrameLayout>
+</RelativeLayout>
