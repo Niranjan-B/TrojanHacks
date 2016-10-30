@@ -22,11 +22,11 @@ public class FragmentPagerAdapter extends android.support.v4.app.FragmentPagerAd
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return AvailableCarpoolsFragment.getInstance();
+            return new AvailableCarpoolsFragment();
         } else if (position == 1) {
-            return MyCarpoolsFragment.getInstance();
+            return new MyCarpoolsFragment();
         } else if (position == 2) {
-            return CarpoolRequestsFragment.getInstance();
+            return new CarpoolRequestsFragment();
         } else {
             return null;
         }
