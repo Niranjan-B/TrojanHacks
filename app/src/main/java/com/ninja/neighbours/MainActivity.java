@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,10 +12,9 @@ import android.widget.Toast;
 
 import com.ninja.neighbours.networking.DataModels.Building;
 import com.ninja.neighbours.networking.DataModels.SearchModel;
-import com.ninja.neighbours.networking.SearchApiAdapter;
+import com.ninja.neighbours.networking.RetrofitAdapter;
 import com.ninja.neighbours.networking.interfaces.SearchApiInterface;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private void callApiToLoadBuildings() {
         final ProgressDialog progressDialog = Utils.startProgressDialog(this);
 
-        SearchApiInterface searchApiInterface = SearchApiAdapter.getSearchAdapter().create(SearchApiInterface.class);
+        SearchApiInterface searchApiInterface = RetrofitAdapter.getSearchAdapter().create(SearchApiInterface.class);
         Observable<SearchModel> searchApiObservable = searchApiInterface.getSearchResults();
         searchApiObservable.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.newThread())
@@ -86,8 +84,6 @@ public class MainActivity extends AppCompatActivity {
         mAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "" + parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
-
                 Intent intent = new Intent(MainActivity.this, ApartmentJoiningActivity.class);
                 intent.putExtra("apartment_name", parent.getItemAtPosition(position) + "");
                 startActivity(intent);
