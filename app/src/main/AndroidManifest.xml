@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ApartmentJoiningActivity"
+        <activity
+            android:name=".ApartmentJoiningActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".HomeScreenActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>
