@@ -1,12 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.ninja.neighbours.fragments.carpool_fragments.CarpoolRequestsFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.ninja.neighbours.fragments.carpool_fragments.CarpoolRequestsFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Carpool requests fragment"/>
+    <include layout="@layout/cardview_carpool_request_owner"/>
 
-</FrameLayout>
+    <include layout="@layout/cardview_carpool_request_user"/>
+
+</LinearLayout>

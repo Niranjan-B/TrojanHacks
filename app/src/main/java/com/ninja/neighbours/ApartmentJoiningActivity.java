@@ -1,5 +1,6 @@
 package com.ninja.neighbours;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +33,13 @@ public class ApartmentJoiningActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         initAppBar();
         initStatusCard();
+
+        mRequestFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ApartmentJoiningActivity.this, HomeScreenActivity.class));
+            }
+        });
 
     }
 
