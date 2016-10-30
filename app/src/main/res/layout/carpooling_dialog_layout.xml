@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edittext_destination"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="Destination"/>
+
+    <EditText
+        android:id="@+id/edittext_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Date"
+        android:inputType="datetime"/>
+
+    <EditText
+        android:id="@+id/edittext_number_of_seats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Number of Seats"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/button_post_ride"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimary"
+        android:text="Post My Request"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:layout_marginBottom="24dp"/>
+
+</LinearLayout>
