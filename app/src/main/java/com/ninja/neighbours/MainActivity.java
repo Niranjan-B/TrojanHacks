@@ -1,5 +1,6 @@
 package com.ninja.neighbours;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MainActivity.this, "" + parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(MainActivity.this, ApartmentJoiningActivity.class);
+                intent.putExtra("apartment_name", parent.getItemAtPosition(position) + "");
+                startActivity(intent);
             }
         });
     }
