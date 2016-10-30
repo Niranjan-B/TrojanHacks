@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_navigation_item"
+            android:checked="true"
+            android:title="Home"/>
+        <item
+            android:id="@+id/neigbhours_navigation_item"
+            android:title="Neigbhours"/>
+        <item
+            android:id="@+id/carpool_navigation_item"
+            android:title="Carpool"/>
+        <item
+            android:id="@+id/notifications_navigation_item"
+            android:title="Notifications"/>
+    </group>
+</menu>

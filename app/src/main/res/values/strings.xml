@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Neighbours</string>
+    <string name="app_name">MyNeigbhourhood</string>
+    <string-array name="status_array">
+        <item name="accepted">ACCEPTED</item>
+        <item name="pending">PENDING</item>
+        <item name="rejected">REJECTED</item>
+    </string-array>
 </resources>
